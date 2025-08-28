@@ -604,7 +604,7 @@ class CompanyIntelligenceProvider:
             enhanced_data = {
                 'company': {
                     'companyName': enhanced_data.get('name', 'Unknown Company'),
-                    'website': enhanced_data.get('website', ''),
+                    'website': enhanced_data.get('website', f'https://www.{enhanced_data.get("ticker", "company").lower()}.com'),
                     'exchange': enhanced_data.get('exchange', 'NASDAQ'),
                     'sector': enhanced_data.get('sector', 'Technology'),
                     'industry': enhanced_data.get('industry', 'Software'),
@@ -625,7 +625,7 @@ class CompanyIntelligenceProvider:
         if 'company' in enhanced_data:
             company = enhanced_data['company']
             company.setdefault('companyName', company.get('name', 'Unknown Company'))
-            company.setdefault('website', '')
+            company.setdefault('website', f'https://www.{company.get("ticker", "company").lower()}.com')
             company.setdefault('exchange', 'NASDAQ')
             company.setdefault('sector', 'Technology')
             company.setdefault('industry', 'Software')
@@ -754,7 +754,7 @@ class CompanyIntelligenceProvider:
         company = data['company']
         company['ticker'] = company.get('ticker', 'UNKNOWN')
         company['companyName'] = company.get('companyName', company.get('name', f'{company["ticker"]} Corporation'))
-        company['website'] = company.get('website', '')
+        company['website'] = company.get('website', f'https://www.{company.get("ticker", "company").lower()}.com')
         company['exchange'] = company.get('exchange', 'NASDAQ')
         company['sector'] = company.get('sector', random.choice(['Technology', 'Finance', 'Life Sciences', 'Manufacturing', 'Other', 'Real Estate & Construction']))
         company['industry'] = company.get('industry', 'Software')

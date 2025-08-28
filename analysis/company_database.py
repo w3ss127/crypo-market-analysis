@@ -56,7 +56,7 @@ class CompanyDatabase:
                     'countryCode': 'US',
                     'exchange': 'NASDAQ',
                     'marketCap': 0,
-                    'website': '',
+                    'website': f'https://www.{ticker.lower()}.com',
                     'description': f'{ticker} is a major {sector.lower()} company',
                     'last_updated': datetime.now(timezone.utc).isoformat(),
                     'data_source': 'fallback'
@@ -110,7 +110,7 @@ class CompanyDatabase:
                     'countryCode': 'US',
                     'exchange': 'NASDAQ',
                     'marketCap': 0,
-                    'website': '',
+                    'website': f'https://www.{ticker.lower()}.com',
                     'description': f'{ticker} is a major {sector.lower()} company',
                     'last_updated': datetime.now(timezone.utc).isoformat(),
                     'data_source': 'fallback'

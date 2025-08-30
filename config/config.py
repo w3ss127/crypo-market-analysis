@@ -14,6 +14,9 @@ class Config:
     CRYPTO_HOLDINGS_BASE_URL: str = os.getenv('CRYPTO_HOLDINGS_URL', 'https://api.example.com')
     CRYPTO_HOLDINGS_API_KEY: str = os.getenv('CRYPTO_HOLDINGS_API_KEY', '')
 
+    # Alpha Vantage API Configuration
+    ALPHAVANTAGE_API_KEY: str = os.getenv('ALPHAVANTAGE_API_KEY', 'S66SMLV440XDKCYI')
+
     # API Endpoints
     COMPANIES_ENDPOINT: str = os.getenv('COMPANIES_ENDPOINT', '/validator/companies')
     VALIDATION_ENDPOINT: str = os.getenv('VALIDATION_ENDPOINT', '/validator/<ticker>/types/<analysis_type>')
